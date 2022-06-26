@@ -1,10 +1,12 @@
-package controller;
+package com.lsis1.grupo10.controller;
 
-import io.vertx.core.Vertx;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import telegram.TelegramBot;
+
+import com.lsis1.grupo10.telegram.TelegramBot;
+
+import io.vertx.core.Vertx;
 
 /**
  * It creates a new TelegramBot object, and then registers it with the

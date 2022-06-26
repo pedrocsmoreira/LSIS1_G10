@@ -1,14 +1,25 @@
 package com.lsis1.grupo10.controller;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
-import database.DBConnection;
-import handler.LoginHandler;
-import model.*;
+import com.lsis1.grupo10.database.DBConnection;
+import com.lsis1.grupo10.handler.LoginHandler;
+import com.lsis1.grupo10.model.Associar_robo;
+import com.lsis1.grupo10.model.Competicao;
+import com.lsis1.grupo10.model.Elementos_equipa;
+import com.lsis1.grupo10.model.Equipa;
+import com.lsis1.grupo10.model.Juri;
+import com.lsis1.grupo10.model.Ranking;
+import com.lsis1.grupo10.model.Robot;
+import com.lsis1.grupo10.model.Ronda;
 
 /**
  * Update things controller

@@ -1,24 +1,23 @@
-package telegram;
+package com.lsis1.grupo10.telegram;
 
-import controller.MqttController;
-import io.vertx.core.Vertx;
-import mqtt.MQTTCli;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.send.SendSticker;
 import org.telegram.telegrambots.meta.api.methods.send.SendVoice;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import keys.keys;
-import javax.annotation.PostConstruct;
+
+import com.lsis1.grupo10.controller.MqttController;
+import com.lsis1.grupo10.keys.keys;
+
+import io.vertx.core.Vertx;
 
 /**
  * > This class extends the TelegramLongPollingBot class, which is a class that
  * allows us to connect to
  * the Telegram API and receive messages
  */
+
 public class TelegramBot extends TelegramLongPollingBot {
 
     private final Vertx vertx;

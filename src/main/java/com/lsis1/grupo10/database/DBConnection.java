@@ -3,10 +3,12 @@ package com.lsis1.grupo10.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import keys.keys;
+import com.lsis1.grupo10.keys.keys;
+
 /**
  * It's a class that connects to the database
  */
+
 public class DBConnection {
 
     static final String DBNAME = keys.DBNAME;

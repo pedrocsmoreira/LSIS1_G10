@@ -1,11 +1,14 @@
-package controller;
+package com.lsis1.grupo10.controller;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-import database.DBConnection;
-import model.Equipa;
-import model.Juri;
-import model.Organizador;
+import com.lsis1.grupo10.database.DBConnection;
+import com.lsis1.grupo10.model.Equipa;
+import com.lsis1.grupo10.model.Juri;
+import com.lsis1.grupo10.model.Organizador;
 
 /*
 

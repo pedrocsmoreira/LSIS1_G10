@@ -1,12 +1,16 @@
-package controller;
+package com.lsis1.grupo10.controller;
 
-import database.DBConnection;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+import com.lsis1.grupo10.database.DBConnection;
+import com.lsis1.grupo10.model.Associar_robo;
+import com.lsis1.grupo10.mqtt.MQTTCli;
+
 import io.vertx.core.Vertx;
-import model.Associar_robo;
-import mqtt.MQTTCli;
-import telegram.TelegramBot;
-
-import java.sql.*;
 
 /**
  * It receives a string, splits it into two integers, inserts them into a

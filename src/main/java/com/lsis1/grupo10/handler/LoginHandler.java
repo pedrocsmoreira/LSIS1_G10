@@ -1,10 +1,11 @@
-package handler;
+package com.lsis1.grupo10.handler;
 
-import controller.LoginController;
+import com.lsis1.grupo10.controller.LoginController;
+import com.lsis1.grupo10.model.Authentication;
+import com.lsis1.grupo10.model.User;
+
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.ext.web.RoutingContext;
-import model.Authentication;
-import model.User;
 
 /**
  * It receives a request from the client, checks if the user is in the database,
