@@ -1,4 +1,4 @@
-package controller;
+package com.lsis1.grupo10.controller;
 
 import java.sql.*;
 import java.time.LocalDateTime;

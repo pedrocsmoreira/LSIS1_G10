@@ -1,4 +1,4 @@
-package database;
+package com.lsis1.grupo10.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

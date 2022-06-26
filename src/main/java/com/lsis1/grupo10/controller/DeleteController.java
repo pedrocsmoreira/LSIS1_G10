@@ -1,10 +1,10 @@
-package controller;
-
-import database.DBConnection;
+package com.lsis1.grupo10.controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import com.lsis1.grupo10.database.DBConnection;
 
 /**
  * It's a class that deletes  a row from a table in a database
