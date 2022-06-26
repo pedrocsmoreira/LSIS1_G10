@@ -1,73 +1,52 @@
-package model;
-
-import handler.LoginHandler;
+package com.lsis1.grupo10.model;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-/**
- * Juri is a class that extends User and has the attributes email and password
- */
+import com.lsis1.grupo10.handler.LoginHandler;
+
 public class Juri extends User {
     private String email;
     private String password;
+    private boolean organizadorLogadoAssociado;
+    private ArrayList<String> competicoes;
 
-    private boolean organizadorLogadoAssociado = false;
+    private static final String STR_DEFAULT = "";
 
-    private ArrayList<String> competicoes = new ArrayList<>();
-
-    // Calling the constructor of the superclass.
     public Juri() {
         super();
+        this.email = STR_DEFAULT;
+        this.password = STR_DEFAULT;
+        this.organizadorLogadoAssociado = false;
+        this.competicoes = new ArrayList<>();
     }
 
-    // A constructor that receives the parameters' nome, email and password and calls
-    // the constructor of
-    // the superclass.
     public Juri(String nome, String email, String password) {
         super(nome);
         this.email = email;
         this.password = password;
+        this.organizadorLogadoAssociado = false;
+        this.competicoes = new ArrayList<>();
     }
 
-    /**
-     * This function returns the email of the user
-     * 
-     * @return The email address of the user.
-     */
     public String getEmail() {
         return this.email;
     }
 
-    /**
-     * This function sets the email of the user
-     * 
-     * @param email The email address of the user.
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * This function returns the password of the user
-     * 
-     * @return The password of the user.
-     */
     public String getPassword() {
         return this.password;
     }
 
-    /**
-     * This function sets the password of the user
-     * 
-     * @param password The password to use for the connection.
-     */
     public void setPassword(String password) {
         this.password = password;
     }
 
     public ArrayList<String> getCompeticoes() {
-        return competicoes;
+        return this.competicoes;
     }
 
     public void setCompeticoes(ArrayList<String> competicoes) {
@@ -75,7 +54,7 @@ public class Juri extends User {
     }
 
     public boolean isOrganizadorLogadoAssociado() {
-        return organizadorLogadoAssociado;
+        return this.organizadorLogadoAssociado;
     }
 
     public void setOrganizadorLogadoAssociado(boolean organizadorLogadoAssociado) {
@@ -89,16 +68,6 @@ public class Juri extends User {
         this.competicoes.add(comp.getNome());
     }
 
-    /**
-     * If the object is the same as the one being compared, return true. If the
-     * object is not an
-     * instance of the same class, return false. If the object is an instance of the
-     * same class,
-     * compare the fields and return true if they are all equal
-     * 
-     * @param o the object to compare with
-     * @return The method returns a boolean value.
-     */
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -111,11 +80,6 @@ public class Juri extends User {
                 && Objects.equals(password, elementos_juri.password);
     }
 
-    /**
-     * The toString() method returns a string representation of the object
-     * 
-     * @return The toString() method returns a string representation of the object.
-     */
     @Override
     public String toString() {
         return "{" +
